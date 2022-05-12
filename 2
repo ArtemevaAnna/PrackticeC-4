@@ -1,0 +1,33 @@
+#include <iostream>
+#include <ctime>
+#include <string>
+#include <vector>
+#include <climits>
+
+using namespace std;
+const int arr_size = 5;
+void bubble_sort(int arr[], const int size) 
+{
+	for (int i = 0; i < size; i++) 
+	{
+		for (int j = 0; j < size - 1; j++) 
+		{
+			if (arr[j] > arr[j + 1]) 
+			{
+				swap(arr[j], arr[j + 1]);
+			}
+		}
+	}
+	return;
+}
+int main() 
+{
+
+	int arr[arr_size] = { 11,0,50,41,10 };
+	bubble_sort(arr, arr_size);
+	for (int i = 0; i < arr_size; i++) 
+	{
+		cout << arr[i] << ' ';
+	}
+	return 0;
+}
