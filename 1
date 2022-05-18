@@ -5,16 +5,18 @@
 #include <climits>
 
 using namespace std;
+
 const int arr_size = 5;
-void selection_sort(int arr[], const int size) 
+
+void st(int arr[], const int size)
 {
-	for (int i = 0; i < size; i++) 
+	for (int i = 0; i < size; i++)
 	{
 		int arr_min = INT_MAX;
 		int index_min = 0;
-		for (int j = i; j < size; j++) 
+		for (int j = i; j < size; j++)
 		{
-			if (arr[j] < arr_min) 
+			if (arr[j] < arr_min)
 			{
 				arr_min = arr[j];
 				index_min = j;
@@ -24,12 +26,13 @@ void selection_sort(int arr[], const int size)
 	}
 	return;
 }
-int main() 
+
+int main()
 {
 
-	int arr[arr_size] = { 11,0,50,41,10 };
-	selection_sort(arr, arr_size);
-	for (int i = 0; i < arr_size; i++) 
+	int arr[arr_size] = { 17,58,1480,54 };
+	st(arr, arr_size);
+	for (int i = 0; i < arr_size; i++)
 	{
 		cout << arr[i] << ' ';
 	}
